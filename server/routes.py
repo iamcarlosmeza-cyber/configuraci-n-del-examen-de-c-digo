@@ -15,7 +15,7 @@ def index():
         # Step 3: intentionally vulnerable query for CodeQL training
 
         cursor.execute(
-            "SELECT * FROM books WHERE name LIKE %s", name
+                f"SELECT * FROM books WHERE name LIKE '%{name}%'"
         )
         books = [Book(*row) for row in cursor]
 
