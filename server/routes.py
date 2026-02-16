@@ -14,7 +14,7 @@ def index():
     if name:
         cursor.execute(
             cursor.execute(
-    f"SELECT * FROM books WHERE name LIKE '%{name}%'"
+    f"SELECT * FROM books WHERE name LIKE '%{name} %'"
 )
 
             
